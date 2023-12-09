@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage{geometry}
+%\geometry{margin=1in}
+\usepackage[margin=1in]{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{url}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{booktabs}
+\usepackage{pgfplotstable}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{float}
+
+
+\begin{document}
+\subsection*{Problem 1}
+Pick the gas station that is farthest away from you that you can still reach given you gas tank.
+
+\subsection*{Problem 2}
+Swap the two stations $o_1$ and $g_1$. Since the greedy picks the farthest station away, then either $o_1$ \textit{is} $g_1$ or $o_1$ is closer than $g_1$, so we can still make it there. 
+
+\subsection*{Problem 3}
+We can continually swap $o_i$ for $g_i$ until we run out of gas stations. The greedy must have the same number of stops, otherwise the optimal would not have been optimal.\\
+
+\noindent Note that the greedy cannot have more stops than the optimal since we always choose the farthest away gas station.
+
+\subsection*{Problem 4}
+No, counter example: $S = 4$, pairs: $(4,3), (2,2), (1,2)$. Greedy chooses $(4,3)$, but optimally we would choose $(2,2), (1,2)$.
+
+\subsection*{Problem 5}
+No, counter example: $S = 2$, pairs: $(1,4), (2,7)$. Greedy chooses $(1,4)$ but optimally we want $(2,7)$.
+
+\end{document}
+ 

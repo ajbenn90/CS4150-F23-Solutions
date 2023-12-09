@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage{geometry}
+%\geometry{margin=1in}
+\usepackage[margin=1in]{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{url}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{booktabs}
+\usepackage{pgfplotstable}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{float}
+
+
+\begin{document}
+\subsection*{Problem 2}
+AB, DG, FG, GH, BC, CG, AE
+
+\subsection*{Problem 3}
+12
+
+\subsection*{Problem 4}
+Consider the if there is another MST, $T'$, such that it uses edge $e_t$ where $T$ does not. Since edge weights are distinct, then the edge chosen by $T$ must have been the smallest weighted edge that connects two vertices. However, we claim that $e_t$ is such edge. Hence it must be included in $T$, but it is not. Therefore a contradiction.\\
+
+\noindent Similarly, if $e_t$ is not used in $T'$, then the edge used in its place would be strictly greater than $e_t$, meaning if we did use $e_t$ our total weight would be reduced. 
+
+\subsection*{Problem 5}
+Yes this is the skills problem (set cover). We can view restaurants as the people in the skills problem, and the customers it covers as the skills each person has. The goal of that problem was to find the maximum number of skills using as few people as possible. In this problem we can just say we can use $k$ restaurants, cover as many people as possible.\\
+
+\noindent TL/DR:
+\begin{itemize}
+    \item Use set cover
+    \item People $\rightarrow$ Restaurants
+    \item Skills $\rightarrow$ Customers
+    \item Goal: Cover skills using as few people as possible $\rightarrow$ Goal: Cover as many customers using $k$ restaurants
+\end{itemize}
+\end{document}
+ 

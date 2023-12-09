@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage{geometry}
+%\geometry{margin=1in}
+\usepackage[margin=1in]{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{url}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{booktabs}
+\usepackage{pgfplotstable}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{float}
+
+
+\begin{document}
+\subsection*{Problem 1}
+Each subset is only considered once per loop. $O(n + R)$
+
+\subsection*{Problem 2}
+Initializing inverted index $O(m)$, loop is same as before. Total $O(m + n + R)$
+
+\subsection*{Problem 3}
+Initializing inverted index $O(m)$, initializing priority queue and inserting $O(n\log n)$, looping through skill sets (each $T_j$ only considered once) $O(R\log(n))$. Total $O(m + n\log n + R\log n)$
+
+\end{document}
+ 
