@@ -8,5 +8,14 @@
     \item $O(\deg(u)$ plus sum of degrees of all the neighbors)
     \item $O(\deg(u) \log{n})$
     \item 
+    \begin{enumerate}
+        \item
+        Iterate through the neighbors of $u$ and $v$ simultaneously.\\
+        If $u_i = v_j$, add that neighbor to the list and increment $i$ and $j$.\\
+        Otherwise, increment $i$ if $u_i < v_j$ and $j$ otherwise.
+        \item
+        Iterate through each neighbor of $u$ or $v$ (whichever has fewer neighbors)\\
+        For each neighbor, binary search the other set and add the neighbor to the list if it's in the set.
+    \end{enumerate}
 \end{enumerate}
 \end{document}

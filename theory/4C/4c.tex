@@ -1,10 +1,23 @@
 \documentclass[11pt]{article}
 \usepackage[top=0.8in, bottom=0.9in, left=0.9in, right=0.9in]{geometry}
+\usepackage{algpseudocode}
 
 \begin{document}
 \begin{enumerate}
     \item 
+    \begin{algorithmic}
+        \State $visited \gets set()$
+        \State $curr = u$
+        \While {$curr$ not in $visited$}
+            \State $visited.add(curr)$
+            \State $curr \gets nbr(curr)[0]$
+        \EndWhile
+    \end{algorithmic}
     \item 
+    \begin{enumerate}
+        \item Assume there are no cycles. Reverse the graph, so the in and out degree of each vertex is swapped. By the same logic as below, there must be at least one vertex with in-degree 0.
+        \item Assume there are no cycles and no vertices with out-degree 0. With the algorithm above, we can start from any node $u$ and iterate $n + 1$ times. Since there are only $n$ nodes, we must have hit some node more than once, so there must be a cycle. A contradiction!
+    \end{enumerate}
     \item X and Y may both be false
     \item X may be false but Y is true
 \end{enumerate}
