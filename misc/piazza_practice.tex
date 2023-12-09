@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.8in, bottom=0.9in, left=0.9in, right=0.9in]{geometry}
+
+\begin{document}
+Solution to the problems in https://piazza.com/class/llb4bhwh59g9n/post/1039
+
+(I'm assuming reductions are made in polynomial time.)
+
+\begin{enumerate}
+    \item ShortestPath, Primality
+    \item All of them
+    \item 
+    \begin{enumerate}
+        \item false. To be NP-complete, the problem must be in NP-hard and in NP.
+        \item true. By definition (see above).
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item true (it's NP-complete)
+        \item false
+        \item true (all NP-complete problems can be reduced to all other NP-complete problems)
+        \item true (by same logic above)
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item yes, A must be NP-complete, and all NP-complete problems can be reduced to all other NP-complete problems.
+        \item yes by above logic.
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item true. Use the reduction to transform the certificate into an instance of B, which is NP. Therefore, A is also NP.
+        \item true. Reducing A to B doesn't tell if it is in P or NP-hard. (However, if we reduced B to A, we'd know A was NP-complete.)
+        \item false. As explained above, this isn't necessarily true.
+    \end{enumerate}
+    \item Create a graph $G' = G$. Let $k' = |V| - k$. Run independent set on $G'$ and $k'$. Let $S'$ be the returned indpendent set. Then, the solution to edge-monitoring is $S = V - S'$. (Clearly, this reduction is polynomial-time.)
+
+    Now, we prove that G' has a size-k' independent set S' IFF G has a size-k edge-monitoring set S.
+
+    Assume, G' has a size-k' indpendent set S'.\\
+    For every edge $e \in E$, $e$ cannot have both vertices in $S'$ since $S'$ is an independent set.\\
+    Therefore, at least one of the vertices of $e$ must be in $S$.\\
+    Therefore, $e$ is monitored.\\
+    Therefore, every edge is monitored. (i.e. $S$ is a ``vertex cover'')
+
+    Assume $G$ has a size-k solution to edge-monitoring (a ``vertex cover'') $S$.\\
+    For every edge $e \in E$, $e$ must have at least one vertex in $S$ since it is covered by $S$.\\
+    Therefore, $e$ does not have both vertices in $S'$.\\
+    Therefore, no edge connects 2 vertices in $S'$.\\
+    Therefore, $S'$ is an independent set.
+\end{enumerate}
+\end{document}
