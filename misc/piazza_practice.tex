@@ -23,13 +23,13 @@ Solution to the problems in https://piazza.com/class/llb4bhwh59g9n/post/1039
     \end{enumerate}
     \item 
     \begin{enumerate}
-        \item yes, A must be NP-complete, and all NP-complete problems can be reduced to all other NP-complete problems.
-        \item yes by above logic.
+        \item yes, SAT can be reduced to ILP(0/1), which can then be reduced to A
+        \item no, we have no guarantee that a reduction exists in the opposite direction
     \end{enumerate}
     \item 
     \begin{enumerate}
         \item true. Use the reduction to transform the certificate into an instance of B, which is NP. Therefore, A is also NP.
-        \item true. Reducing A to B doesn't tell if it is in P or NP-hard. (However, if we reduced B to A, we'd know A was NP-complete.)
+        \item true. Reducing A to B doesn't tell if it is in P or NP-hard. (However, if we reduced B to A, we'd know A was NP-hard.)
         \item false. As explained above, this isn't necessarily true.
     \end{enumerate}
     \item Create a graph $G' = G$. Let $k' = |V| - k$. Run independent set on $G'$ and $k'$. Let $S'$ be the returned indpendent set. Then, the solution to edge-monitoring is $S = V - S'$. (Clearly, this reduction is polynomial-time.)
