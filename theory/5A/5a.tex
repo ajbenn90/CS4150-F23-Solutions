@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.8in, bottom=0.9in, left=0.9in, right=0.9in]{geometry}
+
+\begin{document}
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Remove $\{uv\}$ from the graph ($O(1)$)
+        \item Run $DFS(u)$ ($O(n + m)$)
+        \item If $isReachable[v]$ is true, there is a cycle using $\{uv\}$ ($O(1)$)
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Run $BFS(u)$ ($O(n + M)$)
+        \item For all $v \in V$, check if $dist[v] \leq r$. ($O(n)$)
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item For any vertex $u \in V$, run $BFS(u)$. ($O(n + m)$)
+        \item For every vertex $v$, if $dist[v]$ is even, put $u$ in set $A$; otherwise, put it in set $B$. ($O(n)$)
+        \item For every vertex $v$, check if all of its neighbors are in the opposite set. If not, the partition is impossible. ($O(n + m)$)
+    \end{enumerate}
+\end{enumerate}
+\end{document}

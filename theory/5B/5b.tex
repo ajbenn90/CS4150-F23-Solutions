@@ -1,0 +1,18 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.8in, bottom=0.9in, left=0.9in, right=0.9in]{geometry}
+
+\begin{document}
+\begin{enumerate}
+    \item Add $\frac{1}{2n}$ to every edge. This will penalize longer paths without raising their length to the next integer value since the shortest path is guranteed to be length $n$ or less.
+    \item 
+    \begin{enumerate}
+        \item Add a condition to the while loop so it only runs $K$ times.
+        \item $O(dK \log{K})$
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Run Dijkstra's once on $u$ and once on $v$. ($O((m + n)\log{n})$)
+        \item Loop through every node, finding the one that minimizes $\max(dist(u, w), dist(v, w))$. ($O(n)$)
+    \end{enumerate}
+\end{enumerate}
+\end{document}
