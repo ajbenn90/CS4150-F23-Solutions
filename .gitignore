@@ -402,8 +402,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-misc/piazza_practice.aux
-misc/piazza_practice.fdb_latexmk
+*.aux
+*.fdb_latexmk
 .gitignore
-misc/piazza_practice.fls
-misc/piazza_practice.synctex.gz
+*.fls
+*.synctex.gz
