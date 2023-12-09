@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage{geometry}
+%\geometry{margin=1in}
+\usepackage[margin=1in]{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{url}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{booktabs}
+\usepackage{pgfplotstable}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{float}
+
+
+\begin{document}
+\subsection*{Problem 1}
+Need to show that $(a_1 \cdot b_j) + (a_k \cdot b_n) > (a_1 \cdot b_n) + (a_k \cdot b_j)$ \\
+
+\noindent Note: since a1 is the smallest element and $b_j < b_n$ then swapping $b_j$ for $b_n$ must result in a smaller term. \\
+
+\noindent Also note: since $a_k\cdot b_j < a_k\cdot b_n$ then we really only need to show that $a_1\cdot b_j > a_1 \cdot b_n$, but if we divide out $a_1$ then we are left with $b_j > b_n$ which cannot happen since $b_j$ is supposed to be the smaller term. Hence contradiction to the idea that the vectors are in ascending order.
+
+\subsection*{Problem 2}
+Sort both vectors, one in ascending and one in descending order, $O(n \log n)$. Then do the dot product of the two vectors, $O(n)$. Total: $O(n \log n)$
+
+\subsection*{Problem 3}
+Use Union find / disjoint sets data structure
+\begin{enumerate}
+    \begin{enumerate}
+        \item Initialize each guest to a separate table
+        \item For each pair of friends, union their tables together
+        \item For each pair of enemies, find their tables and make sure they are different
+    \end{enumerate}
+\end{enumerate}
+
+\subsection*{Problem 4}
+\begin{enumerate}
+    \begin{enumerate}
+        \item $O(n)$
+        \item $O(|F| \log n)$
+        \item $O(|E| \log n)$
+    \end{enumerate}
+\end{enumerate}
+Since $|E| + |F| = m$, total: $O(n + m \log n)$
+\end{document}
+ 

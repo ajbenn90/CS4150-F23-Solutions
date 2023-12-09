@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+%\usepackage{geometry}
+%\geometry{margin=1in}
+\usepackage[margin=1in]{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{url}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{booktabs}
+\usepackage{pgfplotstable}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{float}
+
+
+\begin{document}
+\subsection*{Problem 1}
+Answer 1: Eating nothing gives 0 satisfaction, which is always the smallest\\
+Answer 2: Starting at 0 causes an infinite loop
+
+\subsection*{Problem 2}
+At most $n-1$ calls
+
+\subsection*{Problem 4}
+$n^2$ subproblems, $n$ work in each. Total $O(n^3)$
+
+\subsection*{Problem 5}
+Max of day $j+1$ is equal to the max we could eat on day $j$. We also need to multiply by the decay factor too since we are eating it on day $j+1$. Hence $MaxS(n, j+1) = \beta \cdot MaxS(n,j)$
+
+\subsection*{Problem 6}
+$\beta \cdot \sqrt{k} + maxS(n-k)$\\
+
+\noindent Optional: $O(n^2)$ complexity, $O(n)$ space (only $n$ distinct problems).
+\end{document}
+ 
